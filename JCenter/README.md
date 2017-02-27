@@ -52,6 +52,12 @@ bintray.apikey=[JCenter 账户的 APIkey]
 bintray.gpg.password=[GPG密码]
 ```
 
-
-
-
+### **Step 4**
+检查并生成一些文件(aar, pom, etc.)，不是必要的步骤
+```shell
+gradle install
+```
+上传library 
+```shell
+gradle bintrayUpload
+```
