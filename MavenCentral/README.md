@@ -53,7 +53,6 @@ signing.password=[GPG密码]
 signing.secretKeyRingFile=[GPG私钥文件]
 ossrhUsername=[中央库账号]
 ossrhPassword=[中央库密码]
-sonatypeStagingProfileId=[中央库登录账号后的ProfileId]
 ```
 
 ### **Step 4**
@@ -63,7 +62,5 @@ sonatypeStagingProfileId=[中央库登录账号后的ProfileId]
 gradle publishReleasePublicationToSonatypeRepository
 ```
 
-关闭中央库的临时存储并发布
-```
-gradle closeAndReleaseSonatypeStagingRepository
-```
+然后在[Nexus Repository Manager](https://oss.sonatype.org/)关闭临时存储并发布
+
