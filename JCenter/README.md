@@ -1,5 +1,5 @@
 
-# 上传Android library到中央库
+# 上传Android library到JCenter
 
 ### **Step 1**
 在Module的`build.gradle`文件的顶部添加两个插件
