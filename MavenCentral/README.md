@@ -3,6 +3,18 @@
 ### **Step 1**
 在Project的`build.gradle`文件的顶部添加插件
 ```gradle
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        ...
+        // 用户Kotlin文档生成
+        classpath "org.jetbrains.dokka:dokka-gradle-plugin:${kotlin_version}"
+    }
+}
+
 plugins {
     id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 }
@@ -53,6 +65,7 @@ signing.password=[GPG密码]
 signing.secretKeyRingFile=[GPG私钥文件]
 ossrhUsername=[中央库账号]
 ossrhPassword=[中央库密码]
+sonatypeStagingProfileId=[中央库登录账号后的ProfileId]
 ```
 
 ### **Step 4**
